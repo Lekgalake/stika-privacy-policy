@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How stika plans to request a TikTok data export, check for the exact sticker asset, and prepare a WhatsApp sticker pack when supported.">
+  <meta name="theme-color" content="#f7f9fe">
+  <title>How stika works · TikTok export and WhatsApp</title>
+  <link rel="icon" href="assets/stika-icon.png" type="image/png">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap nav">
+  <a class="brand" href="about.html" aria-label="stika home"><img src="assets/stika-icon.png" alt=""><span><strong>stika</strong><small>TIKTOK → WHATSAPP</small></span></a>
+  <nav class="nav-links" aria-label="Main navigation"><a href="about.html">About</a><a href="how-it-works.html" aria-current="page">How it works</a><a href="faq.html">FAQ</a><a href="index.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html" class="nav-cta">Contact</a></nav>
+</div></header>
+<main>
+  <section class="hero"><div class="wrap">
+    <p class="eyebrow">The planned experience</p>
+    <h1>From permission to a careful file check.</h1>
+    <p class="hero-copy">stika is designed to test one specific question: does a TikTok-authorized direct-message export contain the exact sticker as a separate media file?</p>
+  </div></section>
+  <section class="section white"><div class="wrap">
+    <div class="section-heading"><p class="eyebrow">Four steps</p><h2>What happens in the planned flow</h2></div>
+    <div class="steps">
+      <article class="step-card"><span class="step-num">01</span><h3>Review the request</h3><p>Before leaving stika, the user sees that the request is one-time, read-only, and used to look for the original sticker file.</p></article>
+      <article class="step-card"><span class="step-num">02</span><h3>Choose on TikTok</h3><p>TikTok hosts the sign-in and consent step. The user can approve or cancel there. stika does not ask for the TikTok password.</p></article>
+      <article class="step-card"><span class="step-num">03</span><h3>Inspect the export</h3><p>If authorized and available, stika checks the export for separate image or video files. Message text is not used to recreate a sticker.</p></article>
+      <article class="step-card"><span class="step-num">04</span><h3>Explain the result</h3><p>If no exact original file can be confirmed, the app says so. WhatsApp handoff is offered only after an eligible sticker pack is supported.</p></article>
+    </div>
+  </div></section>
+  <section class="section"><div class="wrap two-col">
+    <article class="info-card accent"><p class="eyebrow">Data request</p><h2>One-time and read-only</h2><p>The planned permission is for a single direct-message export. stika will not send or reply to messages and does not need ongoing access for this check.</p></article>
+    <article class="info-card green"><p class="eyebrow">File handling</p><h2>Temporary inspection</h2><p>The development server is designed to inspect the export in memory and report file counts without returning message text or file names to the app. The current build does not request an export.</p></article>
+  </div></section>
+  <section class="section white"><div class="wrap two-col">
+    <article class="info-card amber"><p class="eyebrow">Current state</p><h2>Preview, not transfer</h2><p>Login Kit and Data Portability approvals are not in place. WhatsApp sticker-pack handoff is still being built. The present app demonstrates the intended flow only.</p></article>
+    <article class="info-card"><p class="eyebrow">Regional availability</p><h2>Subject to TikTok</h2><p>TikTok currently describes Data Portability API coverage for people in the EEA and UK. Other regions may not be eligible to use this export path.</p><p><a href="faq.html">Read the frequently asked questions →</a></p></article>
+  </div></section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><p>© 2026 GREASON TECH SOLUTIONS (PTY) LTD · stika</p><nav class="footer-links" aria-label="Legal and support"><a href="about.html">About stika</a><a href="faq.html">FAQ</a><a href="index.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="contact.html">Contact</a></nav></div></footer>
+</body>
+</html>
