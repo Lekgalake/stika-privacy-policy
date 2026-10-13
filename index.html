@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for the stika mobile app.">
+  <title>stika Privacy Policy</title>
+  <style>
+    :root { color-scheme: light; --ink:#17223b; --muted:#58647a; --blue:#315bee; --line:#e4e8f0; --paper:#f7f9fe; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+    main { max-width:800px; margin:40px auto; padding:40px 44px; background:#fff; border:1px solid var(--line); border-radius:22px; }
+    h1 { margin:0 0 8px; font-size:2.2rem; letter-spacing:-.04em; }
+    h2 { margin:30px 0 8px; font-size:1.2rem; }
+    p, li { color:var(--muted); }
+    a { color:var(--blue); }
+    .date { margin-top:0; color:var(--muted); }
+    .notice { padding:16px 18px; border-left:4px solid var(--blue); background:#f0f4ff; border-radius:8px; }
+    @media(max-width:600px) { main { margin:0; padding:28px 20px; border:0; border-radius:0; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>stika Privacy Policy</h1>
+  <p class="date">Effective date: October 13, 2026</p>
+
+  <p>This notice explains how GREASON TECH SOLUTIONS (PTY) LTD ("we", "us") handles information when you use stika ("the app").</p>
+
+  <p class="notice"><strong>Current status:</strong> TikTok sign-in and data export are not enabled in the current app build. WhatsApp sticker-pack transfer is also not available. The app does not currently request or process a TikTok export. We will update this policy before enabling those features if their data handling differs from what is described here.</p>
+
+  <h2>Information the app handles</h2>
+  <ul>
+    <li><strong>App session identifier.</strong> The app creates a random identifier and stores it in your device's secure storage. It is used to associate your app session with requests to the stika service. It is not your TikTok username.</li>
+    <li><strong>TikTok information, if the feature is enabled.</strong> After you choose to connect, TikTok handles its own sign-in and consent screens. If you approve a one-time direct-message export, TikTok may provide an archive containing direct-message information such as dates, senders, message content, and media included in the export.</li>
+    <li><strong>Temporary export inspection, if enabled.</strong> The stika server receives and unpacks the requested archive in memory to inspect its file entries and count image or video files. The current implementation does not save the archive to disk, return message text or individual file names to the app, or treat a media file as proof that it is the original sticker. The archive contents are not retained after the inspection. TikTok access tokens and export session details are kept temporarily in server memory and are removed after a successful inspection or when the session expires.</li>
+  </ul>
+
+  <h2>How we use information</h2>
+  <p>The app session identifier is used to keep requests associated with the same app session. If TikTok export becomes available, the export is used only to check whether separate image or video files are present. We do not use this information for advertising, profiling, or selling personal information.</p>
+
+  <h2>Where information goes</h2>
+  <p>Information is sent only when needed for a feature you choose to use. TikTok processes sign-in and prepares any export under its own terms and privacy policy. If the export feature is enabled, the archive is sent from TikTok to the stika server for the temporary check described above. The app's current build has no production server configured, and TikTok access remains disabled. Before live export processing is enabled, we will identify the service providers used to operate the server and update this notice if needed.</p>
+
+  <h2>Retention and deletion</h2>
+  <p>The current app stores the random session identifier in device secure storage until you clear the app's stored data or uninstall the app. In the current server implementation, temporary TikTok session data expires after 30 minutes of inactivity and is removed after a successful archive check. The export archive is processed in memory and is not written to disk by that implementation. These practices may change only with an updated notice before a feature requiring different handling is enabled.</p>
+
+  <h2>Children and age requirements</h2>
+  <p>stika is intended for people aged 16 and older, consistent with TikTok's minimum age for direct messaging. In South Africa, a person under 18 is a child under POPIA. The current app has no guardian-consent or age-verification flow, and TikTok export is disabled. We will not enable processing of a user under 18's personal information until an appropriate competent-person consent process and safeguards are in place. Parents or guardians can contact us with questions or requests about a child's information.</p>
+
+  <h2>Security</h2>
+  <p>The app stores its random session identifier using the device's secure storage. The development server keeps TikTok tokens and export state in process memory rather than writing them to disk. No internet-connected service can be guaranteed completely secure; we will review and update safeguards before enabling public export processing.</p>
+
+  <h2>Your choices and requests</h2>
+  <p>You can choose not to connect TikTok or request an export. You can stop using the app and clear its local data. Depending on the law that applies to you, you may have rights to request access to, correction of, or deletion of personal information. For privacy questions or requests, email <a href="mailto:support@studenthubmarketing.co.za">support@studenthubmarketing.co.za</a>. Please do not include your TikTok password or security codes in your email.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this notice as stika changes. The effective date at the top will show when the latest version took effect. We will make an updated notice available before turning on features that materially change the information handled.</p>
+
+  <h2>Contact</h2>
+  <p>GREASON TECH SOLUTIONS (PTY) LTD<br>
+  Privacy contact: <a href="mailto:support@studenthubmarketing.co.za">support@studenthubmarketing.co.za</a></p>
+</main>
+</body>
+</html>
