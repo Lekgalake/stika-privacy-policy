@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request deletion of information held by stika.">
+  <meta name="theme-color" content="#f7f9fe">
+  <title>Request data deletion · stika</title>
+  <link rel="icon" href="assets/stika-icon.png" type="image/png">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap nav">
+  <a class="brand" href="about.html" aria-label="stika home"><img src="assets/stika-icon.png" alt=""><span><strong>stika</strong><small>TIKTOK → WHATSAPP</small></span></a>
+  <nav class="nav-links" aria-label="Main navigation"><a href="about.html">About</a><a href="how-it-works.html">How it works</a><a href="faq.html">FAQ</a><a href="index.html">Privacy</a><a href="terms.html">Terms</a><a href="deletion.html" aria-current="page">Delete data</a></nav>
+</div></header>
+<main class="legal">
+  <p class="eyebrow">Privacy request</p>
+  <h1>Request deletion of your stika data</h1>
+  <p class="hero-copy">Use this page to prepare an email to GREASON TECH SOLUTIONS (PTY) LTD requesting deletion of information stika holds about you.</p>
+
+  <div class="policy-notice"><strong>Current service status:</strong> TikTok export is disabled in the current app build. Stika does not currently receive or retain production TikTok exports. You can still use this channel to ask us to check for and delete any information associated with you.</div>
+
+  <h2>1. Prepare your request</h2>
+  <p>Enter a reply-to email and choose what you want us to do. The information below stays in this page until you choose to open your email app. Review the message there and send it to submit your request.</p>
+  <form id="deletion-form" class="request-form">
+    <label for="reply-email">Your email address</label>
+    <input id="reply-email" name="email" type="email" autocomplete="email" required>
+
+    <label for="request-type">What would you like us to delete?</label>
+    <select id="request-type" name="request" required>
+      <option value="Delete any personal information stika holds about me">All personal information stika holds about me</option>
+      <option value="Delete TikTok-sourced data associated with my stika request">TikTok-sourced data associated with my stika request</option>
+      <option value="Please tell me what personal information stika holds about me">First, tell me what information stika holds about me</option>
+    </select>
+
+    <label for="reference">Optional request or session reference</label>
+    <input id="reference" name="reference" type="text" maxlength="120" autocomplete="off" placeholder="Do not include passwords or login codes">
+
+    <button class="button" type="submit">Continue to email</button>
+  </form>
+
+  <section id="email-next-step" class="info-card accent" hidden aria-live="polite">
+    <p class="eyebrow">Next step</p>
+    <h2>Send the email to submit your request</h2>
+    <p>Your email app should open with a message addressed to <a href="mailto:support@studenthubmarketing.co.za">support@studenthubmarketing.co.za</a>. The request is not submitted until you send that message.</p>
+    <p>After support receives it, we will verify the request, check for information stika holds, delete any TikTok-sourced data we control, and reply to confirm what was done. If we hold no such data, we will say so in our reply.</p>
+    <p class="small">Do not email your TikTok password, login code, or one-time security code. This page does not send or store your request.</p>
+    <a class="button secondary" href="contact.html">Return to support information</a>
+  </section>
+
+  <h2>2. How the request is handled</h2>
+  <ol>
+    <li>Support receives your email and verifies that the request is yours. We may ask for limited information needed to find the relevant app session.</li>
+    <li>We check the information Stika controls. The current app does not connect to TikTok or keep production exports.</li>
+    <li>If we hold TikTok-sourced data associated with your request, we delete it from systems we control and reply to confirm the result. If we hold none, we confirm that instead.</li>
+  </ol>
+  <p>For other privacy questions, contact <a href="mailto:support@studenthubmarketing.co.za">support@studenthubmarketing.co.za</a>. Read the <a href="index.html">Privacy Policy</a> for more about Stika’s current data handling.</p>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><p>© 2026 GREASON TECH SOLUTIONS (PTY) LTD · stika</p><nav class="footer-links" aria-label="Legal and support"><a href="index.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="contact.html">Support</a></nav></div></footer>
+<script>
+document.getElementById('deletion-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+  const form = new FormData(event.currentTarget);
+  const email = String(form.get('email')).trim();
+  const request = String(form.get('request'));
+  const reference = String(form.get('reference')).trim();
+  const body = [
+    request,
+    '',
+    `Reply-to email: ${email}`,
+    reference ? `Request/session reference: ${reference}` : '',
+    '',
+    'I understand Stika may ask me for limited information to verify and locate the request. I have not included my TikTok password or login codes.'
+  ].filter(Boolean).join('\n');
+  const mailto = `mailto:support@studenthubmarketing.co.za?subject=${encodeURIComponent('[stika privacy request] Data deletion')}&body=${encodeURIComponent(body)}`;
+  const next = document.getElementById('email-next-step');
+  next.hidden = false;
+  next.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  window.location.href = mailto;
+});
+</script>
+</body>
+</html>
